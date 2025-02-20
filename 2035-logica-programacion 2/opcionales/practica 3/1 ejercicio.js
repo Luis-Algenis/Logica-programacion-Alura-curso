@@ -2,9 +2,8 @@
 //let peso = '65kg';
 //IMC = kg/(m)2
 let resultado = "";
-function indice(altura, peso) {
-   return resultado = peso / (altura * altura);
+function IMC(altura, peso) {
+   console.log(resultado = peso / (altura * altura));
 }
 
-console.log(resultado);
-indice(1.73, 65);
+IMC(1.73, 65);
