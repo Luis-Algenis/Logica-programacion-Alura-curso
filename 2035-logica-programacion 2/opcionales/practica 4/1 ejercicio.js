@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 
 let listaGenerica = [];
 //para agregar elemento a mi arreglo debo de anadir lo siguiente: arreglo.push[elemento a arregar].
+=======
+const listaGenerica = []
+
+let lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python', 'Java', 'Ruby', 'GoLang']
+
+function mostrar() {
+    console.log(lenguagesDeProgramacion);
+}
+
+mostrar();
+
+function invertir() {
+    console.log(lenguagesDeProgramacion.length -1);
+}
+>>>>>>> ebccf27 (no quiero subir esto)
 
 let lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python', 'Java', 'Ruby', 'GoLang']
 
