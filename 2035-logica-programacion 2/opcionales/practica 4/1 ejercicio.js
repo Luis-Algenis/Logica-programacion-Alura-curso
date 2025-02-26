@@ -21,5 +21,23 @@ reverso();
 listaGenerica.push(2, 5, 9, 24, 16, 15);
 console.log(listaGenerica);
 function promedio() {
-    
+    let suma = listaGenerica.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    return Math.floor(suma/listaGenerica.length); 
 }
+
+console.log(promedio());
+
+function maximoMinimo() {
+    let mayor = Math.max(...listaGenerica);
+    let menor = Math.min(...listaGenerica);
+    console.log(mayor);
+    console.log(menor);
+}
+
+maximoMinimo();
+
+function totalSumaElementos() {
+    return listaGenerica.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+}
+
+console.log(totalSumaElementos());
