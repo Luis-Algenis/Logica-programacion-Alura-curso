@@ -7,9 +7,18 @@ let amigoNuevo = [];
 
 
 function agregarAmigo() {
-    let nuevoAmigo = document.getElementById("amigo").value;
-    amigoNuevo.push(nuevoAmigo);
-    document.getElementById("listaAmigos").innerHTML = amigoNuevo;
+    let nombreAmigo = document.getElementById("amigo").value;
+    //console.log(nombreAmigo);
+    //document.getElementById("listaAmigos").innerHTML = amigoNuevo;
+    if (nombreAmigo == 0) { 
+        alert("Por favor, inserte un nombre.");
+        return;
+       
+    } 
+
+    amigoNuevo.push(nombreAmigo);
+    console.log(amigoNuevo);
+    nombreAmigo = "";
+    nombreAmigo.focus();
 }
-console.log(amigoNuevo);
 
