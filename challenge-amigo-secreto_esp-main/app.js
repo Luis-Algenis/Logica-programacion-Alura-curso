@@ -13,12 +13,14 @@ function agregarAmigo() {
     if (nombreAmigo == 0) { 
         alert("Por favor, inserte un nombre.");
         return;
-       
+        
     } 
-
+      
     amigoNuevo.push(nombreAmigo);
+    limpiar();
     console.log(amigoNuevo);
-    nombreAmigo = "";
-    nombreAmigo.focus();
 }
 
+function limpiar() {
+    document.getElementById("amigo").value = '';
+}
