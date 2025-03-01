@@ -26,6 +26,15 @@ function listaPropuesta() {
     let listavisible = document.getElementById("listaAmigos");
     //listavisible.innerHTML = amigoNuevo;
     listavisible.innerHTML = "";
+        for (let i = 0; i < amigoNuevo.length; i++) {
+            //const lista = amigoNuevo[i];
+            let indice = document.createElement(li);
+            let elemento = document.querySelector(indice);
+            elemento.innerHTML = amigoNuevo[i];
 
+            
+        }
 
 }
+
+
