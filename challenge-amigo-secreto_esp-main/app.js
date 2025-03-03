@@ -23,16 +23,19 @@ function agregarAmigo() {
 
 
 function listaPropuesta() {
-    let listavisible = document.getElementById("listaAmigos");
+    let listaVisible = document.getElementById("listaAmigos");
     //listavisible.innerHTML = amigoNuevo;
-    listavisible.innerHTML = "";
+    listaVisible.innerHTML = "";
         for (let i = 0; i < amigoNuevo.length; i++) {
             //const lista = amigoNuevo[i];
             let indice = document.createElement('li');
         //let elemento = document.querySelector(indice);
         //elemento.innerHTML = amigoNuevo[i];
-
-            
+            /*textContent es similar a innerHTML, la diferencia esta en que tex.. solo lee texto y excluye las etiquetas,
+            miestras que innet.. tambien lo hace pero incluye etiquetas.*/
+            indice.textContent = amigoNuevo[i];
+            //el metodo appendChild se utiliza para crear Sub-ramas de una etiqueta o elemento.
+            listaVisible.appendChild(indice);
         }
 
 }
