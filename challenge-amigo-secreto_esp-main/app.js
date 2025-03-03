@@ -1,9 +1,9 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 /*1 Input(id="amigo"), 2 botton(onclick="agregarAmigo()"), 3 ul(id="listaAmigos"), 
-4 ul(id="resultado"), 5 botton(onclick="sortearAmigo()")
+4 botton(onclick="sortearAmigo()"), 5 ul(id="resultado")
 */
-let amigoNuevo = [];
+var amigoNuevo = [];
 
 
 function agregarAmigo() {
@@ -14,7 +14,7 @@ function agregarAmigo() {
         return;
         
     } 
-      
+
     amigoNuevo.push(nombreAmigo);
     listaPropuesta();
     document.getElementById("amigo").value = '';
@@ -41,4 +41,14 @@ function listaPropuesta() {
 }
 
 
-
+function sortearAmigo() {
+    if (amigoNuevo.length == 0) {
+        alert("Debes colocar minimo de dos nombres de amigos en adelante");
+    } if (amigoNuevo.length == 1) {
+        alert("Debes colocar minimo de dos nombres de amigos en adelante");
+    }
+    let nombreFlotante = Math.floor(Math.random()*amigoNuevo.length);
+    //console.log(nombreFlotante);
+    let amigoFlotante = document.querySelector("#resultado");
+    amigoFlotante.innerHTML = amigoNuevo[nombreFlotante];
+}
