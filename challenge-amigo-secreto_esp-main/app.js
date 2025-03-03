@@ -9,6 +9,7 @@ var amigoNuevo = [];
 function agregarAmigo() {
     let nombreAmigo = document.getElementById("amigo").value;
     //console.log(nombreAmigo);
+    //tenia === y eso me causo un estanco tremendo en este desafio.
     if (nombreAmigo == 0) { 
         alert("Por favor, inserte un nombre.");
         return;
