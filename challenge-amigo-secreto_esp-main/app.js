@@ -51,5 +51,5 @@ function sortearAmigo() {
     let nombreFlotante = Math.floor(Math.random()*amigoNuevo.length);
     //console.log(nombreFlotante);
     let amigoFlotante = document.querySelector("#resultado");
-    amigoFlotante.innerHTML = amigoNuevo[nombreFlotante];
+    amigoFlotante.innerHTML = `El amigo secreto era: ${amigoNuevo[nombreFlotante]}`;
 }
