@@ -1,14 +1,9 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
-/*1 Input(id="amigo"), 2 botton(onclick="agregarAmigo()"), 3 ul(id="listaAmigos"), 
-4 botton(onclick="sortearAmigo()"), 5 ul(id="resultado")
-*/
 var amigoNuevo = [];
-
 
 function agregarAmigo() {
     let nombreAmigo = document.getElementById("amigo").value;
-    //console.log(nombreAmigo);
     //tenia === y eso me causo un estanco tremendo en este desafio.
     if (nombreAmigo == 0) { 
         alert("Por favor, inserte un nombre.");
@@ -19,9 +14,7 @@ function agregarAmigo() {
     amigoNuevo.push(nombreAmigo);
     listaPropuesta();
     document.getElementById("amigo").value = '';
-    console.log(amigoNuevo);
 }
-
 
 function listaPropuesta() {
     let listaVisible = document.getElementById("listaAmigos");
@@ -41,7 +34,6 @@ function listaPropuesta() {
 
 }
 
-
 function sortearAmigo() {
     if (amigoNuevo.length == 0) {
         alert("Debes colocar minimo de dos nombres de amigos en adelante");
@@ -49,7 +41,9 @@ function sortearAmigo() {
         alert("Debes colocar minimo de dos nombres de amigos en adelante");
     }
     let nombreFlotante = Math.floor(Math.random()*amigoNuevo.length);
-    //console.log(nombreFlotante);
     let amigoFlotante = document.querySelector("#resultado");
     amigoFlotante.innerHTML = `El amigo secreto era: ${amigoNuevo[nombreFlotante]}`;
+
+    let borrar = document.querySelector('#listaAmigos');
+    borrar.innerHTML = "";
 }
